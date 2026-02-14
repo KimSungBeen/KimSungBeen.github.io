@@ -23,4 +23,6 @@ title = "sbeenx.io"
     { github = "https://github.com/KimSungBeen" },
     { instagram = "https://www.instagram.com/do1and/" },
     { linkedin = "https://www.linkedin.com/in/sbeen" },
+    { google = "mailto:sbeenx.io@gmail.com" },
+    { email = "mailto:s_been@kakao.com" },
   ]

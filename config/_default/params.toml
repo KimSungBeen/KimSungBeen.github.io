@@ -1,6 +1,6 @@
 colorScheme = "grasslamb"
 defaultAppearance = "light"
-autoSwitchAppearance = true
+autoSwitchAppearance = false
 
 enableA11y = false
 enableSearch = true
