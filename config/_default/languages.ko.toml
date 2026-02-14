@@ -13,8 +13,11 @@ title = "Sungbin Kim"
 
 [params.author]
   name = "Sungbin Kim"
+  email = "s_been@kakao.com"
+  image = "img/profile.png"
+  imageQuality = 96
   headline = "Android Developer"
-  bio = "Hugo Blowfish 기반 개인 웹사이트"
+  bio = "Android 개발과 학습 내용을 기록합니다."
   links = [
     { github = "https://github.com/KimSungBeen" },
   ]
