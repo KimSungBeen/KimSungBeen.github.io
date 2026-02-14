@@ -2,17 +2,18 @@ disabled = false
 languageCode = "ko-KR"
 languageName = "한국어"
 weight = 1
-title = "Sungbin Kim"
+title = "sbeenx.io"
 
 [params]
   displayName = "KO"
   isoCode = "ko"
   rtl = false
   dateFormat = "2006-01-02"
-  description = "Sungbin Kim의 개발 기록"
+  logo = "img/lamb-logo.png"
+  description = "Sungbeen Kim의 개발 기록"
 
 [params.author]
-  name = "Sungbin Kim"
+  name = "Sungbeen Kim"
   email = "s_been@kakao.com"
   image = "img/profile.png"
   imageQuality = 96
@@ -20,4 +21,6 @@ title = "Sungbin Kim"
   bio = "Android 개발과 학습 내용을 기록합니다."
   links = [
     { github = "https://github.com/KimSungBeen" },
+    { instagram = "https://www.instagram.com/do1and/" },
+    { linkedin = "https://www.linkedin.com/in/sbeen" },
   ]

@@ -1,0 +1,37 @@
+/* GrassLamb scheme (mascot grass vivid base: #7FE260) */
+:root {
+  --color-neutral: 255, 255, 255;
+  /* Gray (keeps default readability) */
+  --color-neutral-50: 248, 250, 252;
+  --color-neutral-100: 241, 245, 249;
+  --color-neutral-200: 226, 232, 240;
+  --color-neutral-300: 203, 213, 225;
+  --color-neutral-400: 148, 163, 184;
+  --color-neutral-500: 100, 116, 139;
+  --color-neutral-600: 71, 85, 105;
+  --color-neutral-700: 51, 65, 85;
+  --color-neutral-800: 30, 41, 59;
+  --color-neutral-900: 15, 23, 42;
+  /* Primary (profile grass scale) */
+  --color-primary-50: 242, 254, 236;
+  --color-primary-100: 227, 251, 214;
+  --color-primary-200: 199, 245, 177;
+  --color-primary-300: 170, 238, 145;
+  --color-primary-400: 147, 232, 118;
+  --color-primary-500: 127, 226, 96;
+  --color-primary-600: 103, 198, 79;
+  --color-primary-700: 83, 170, 64;
+  --color-primary-800: 66, 140, 51;
+  --color-primary-900: 51, 109, 40;
+  /* Secondary */
+  --color-secondary-50: 249, 253, 234;
+  --color-secondary-100: 240, 249, 206;
+  --color-secondary-200: 224, 241, 163;
+  --color-secondary-300: 204, 228, 116;
+  --color-secondary-400: 182, 211, 79;
+  --color-secondary-500: 159, 190, 57;
+  --color-secondary-600: 128, 152, 43;
+  --color-secondary-700: 100, 118, 35;
+  --color-secondary-800: 77, 90, 29;
+  --color-secondary-900: 57, 66, 22;
+}

@@ -1,0 +1,50 @@
+{{ $disableImageOptimization := .Site.Params.disableImageOptimization | default false }}
+<section class="bf-home-split-homepage relative overflow-visible">
+  <article class="bf-home-split-shell mx-auto flex w-full flex-col items-center justify-center px-4 text-center">
+    <header class="bf-home-split-profile relative mb-3 flex flex-col items-center px-1 py-1">
+      {{ with .Site.Params.Author.image }}
+        {{ $authorImage := "" }}
+        {{ if or (strings.HasPrefix . "http:") (strings.HasPrefix . "https:") }}
+          {{ $authorImage = resources.GetRemote . }}
+        {{ else }}
+          {{ $authorImage = resources.Get . }}
+        {{ end }}
+        {{ if $authorImage }}
+          {{ $final := $authorImage }}
+          {{ $squareImage := $authorImage }}
+          {{ if not (or $disableImageOptimization (eq $authorImage.MediaType.SubType "svg")) }}
+            {{ $final = $authorImage.Fill (print "336x336 q" ( $.Site.Params.Author.imagequality | default "96" )) }}
+            {{ $shortSide := int (math.Min $authorImage.Width $authorImage.Height) }}
+            {{ $squareImage = $authorImage.Crop (printf "%dx%d" $shortSide $shortSide ) }}
+          {{ end }}
+          <img
+            class="bf-home-split-avatar mb-3 h-40 w-40 rounded-full shadow-2xl"
+            width="160"
+            height="160"
+            alt="{{ $.Site.Params.Author.name | default `Author` }}"
+            src="{{ $final.RelPermalink }}"
+            data-zoom-src="{{ $squareImage.RelPermalink }}">
+        {{ end }}
+      {{ end }}
+      <h1 class="bf-home-split-title text-5xl font-extrabold">
+        {{ .Site.Params.Author.name | default .Site.Title }}
+      </h1>
+      {{ with .Site.Params.Author.headline }}
+        <h2 class="bf-home-split-subtitle mt-1 text-2xl">
+          {{ . | markdownify }}
+        </h2>
+      {{ end }}
+      <div class="bf-home-split-links mt-3 text-2xl">
+        {{ partialCached "author-links.html" . }}
+      </div>
+    </header>
+    <section class="bf-home-split-content prose w-full max-w-2xl">
+      {{ .Content }}
+    </section>
+  </article>
+</section>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.body.classList.add("bf-home-split");
+  });
+</script>

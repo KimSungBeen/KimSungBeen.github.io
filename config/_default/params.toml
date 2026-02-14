@@ -1,4 +1,4 @@
-colorScheme = "blowfish"
+colorScheme = "grasslamb"
 defaultAppearance = "light"
 autoSwitchAppearance = true
 
@@ -17,17 +17,17 @@ fingerprintAlgorithm = "sha512"
 [footer]
   showMenu = true
   showCopyright = true
-  showThemeAttribution = true
+  showThemeAttribution = false
   showAppearanceSwitcher = true
   showScrollToTop = true
 
 [homepage]
   layout = "profile"
-  showRecent = true
-  showRecentItems = 8
+  showRecent = false
+  showRecentItems = 5
   showMoreLink = true
   showMoreLinkDest = "/posts/"
-  cardView = true
+  cardView = false
   cardViewScreenWidth = false
 
 [article]
