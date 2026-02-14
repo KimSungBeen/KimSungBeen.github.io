@@ -1,0 +1,20 @@
+disabled = false
+languageCode = "ko-KR"
+languageName = "한국어"
+weight = 1
+title = "Sungbin Kim"
+
+[params]
+  displayName = "KO"
+  isoCode = "ko"
+  rtl = false
+  dateFormat = "2006-01-02"
+  description = "Sungbin Kim의 개발 기록"
+
+[params.author]
+  name = "Sungbin Kim"
+  headline = "Android Developer"
+  bio = "Hugo Blowfish 기반 개인 웹사이트"
+  links = [
+    { github = "https://github.com/KimSungBeen" },
+  ]

@@ -1,0 +1,20 @@
+[[main]]
+  name = "글"
+  pageRef = "posts"
+  weight = 10
+
+[[main]]
+  name = "태그"
+  pageRef = "tags"
+  weight = 20
+
+[[main]]
+  identifier = "github"
+  pre = "github"
+  url = "https://github.com/KimSungBeen"
+  weight = 30
+
+[[footer]]
+  name = "GitHub"
+  url = "https://github.com/KimSungBeen"
+  weight = 10
