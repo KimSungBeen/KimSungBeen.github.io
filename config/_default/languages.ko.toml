@@ -10,15 +10,16 @@ title = "sbeenx.io"
   rtl = false
   dateFormat = "2006-01-02"
   logo = "img/lamb-logo.png"
+  logoLight = "img/lamb-logo-light.png"
   description = "Sungbeen Kim의 개발 기록"
 
 [params.author]
   name = "Sungbeen Kim"
-  email = "s_been@kakao.com"
+  email = "sbeenx.io@gmail.com"
   image = "img/profile.png"
   imageQuality = 96
-  headline = "Android Developer"
-  bio = "Android 개발과 학습 내용을 기록합니다."
+  headline = '🇰🇷 Android developer <img src="/img/android-head.svg" alt="Android" style="display:inline-block;height:0.86em;width:auto;vertical-align:-0.1em;margin:0 0.08em;" /> Katsu lover <img src="/img/katsu.png" alt="Katsu" style="display:inline-block;height:1.05em;width:auto;vertical-align:-0.1em;margin:0 0.08em;" /> Manchester city fan <img src="/img/manchester-city-logo.png" alt="Manchester City" style="display:inline-block;height:1.05em;width:auto;vertical-align:-0.1em;margin:0 0.08em;" />'
+  bio = "나와 동료의 시간을 절약하자."
   links = [
     { github = "https://github.com/KimSungBeen" },
     { instagram = "https://www.instagram.com/do1and/" },

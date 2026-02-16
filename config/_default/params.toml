@@ -1,5 +1,5 @@
 colorScheme = "grasslamb"
-defaultAppearance = "light"
+defaultAppearance = "dark"
 autoSwitchAppearance = false
 
 enableA11y = false
@@ -10,6 +10,7 @@ enableStructuredBreadcrumbs = true
 mainSections = ["posts"]
 hotlinkFeatureImage = false
 fingerprintAlgorithm = "sha512"
+disableTextInHeader = true
 
 [header]
   layout = "fixed"
@@ -22,12 +23,12 @@ fingerprintAlgorithm = "sha512"
   showScrollToTop = true
 
 [homepage]
-  layout = "profile"
-  showRecent = false
-  showRecentItems = 5
+  layout = "background"
+  showRecent = true
+  showRecentItems = 6
   showMoreLink = true
   showMoreLinkDest = "/posts/"
-  cardView = false
+  cardView = true
   cardViewScreenWidth = false
 
 [article]

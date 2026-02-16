@@ -1,18 +1,63 @@
 /* Header logo sizing override for the lamb mark */
 .main-menu .logo {
-  width: 6.5rem;
-  height: 6.5rem;
-  max-width: 6.5rem;
-  max-height: 6.5rem;
+  width: auto;
+  height: 2.35rem;
+  max-width: 8.5rem;
+  max-height: 2.35rem;
+  object-fit: contain;
+}
+
+/* Match ekwska.com typography override */
+:root {
+  --font-sans: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  --default-font-family: var(--font-sans);
+  --font-mono: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  --default-mono-font-family: var(--font-mono);
+}
+
+html,
+body {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 16px;
+}
+
+.font-sans,
+.prose,
+.prose * {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 
 @media (max-width: 640px) {
   .main-menu .logo {
-    width: 5.5rem;
-    height: 5.5rem;
-    max-width: 5.5rem;
-    max-height: 5.5rem;
+    width: auto;
+    height: 2rem;
+    max-width: 7rem;
+    max-height: 2rem;
   }
+}
+
+.article-link--card {
+  border-width: 2px;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.15);
+  backdrop-filter: blur(4px);
+}
+
+.bf-home-typeit {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  min-height: 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: rgba(var(--color-neutral-700), 1);
+}
+
+html.dark .bf-home-typeit {
+  color: rgba(var(--color-neutral-300), 1);
+}
+
+.bf-home-typeit .ti-cursor {
+  color: rgba(var(--color-primary-400), 1);
 }
 
 body.bf-home-split {

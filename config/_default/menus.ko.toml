@@ -1,18 +1,32 @@
 [[main]]
-  name = "글"
+  name = "about"
+  pageRef = "about"
+  title = "about"
+  weight = 5
+
+[[main]]
+  name = "resume"
+  pageRef = "resume"
+  title = "resume"
+  weight = 6
+
+[[main]]
+  name = "blog"
   pageRef = "posts"
+  title = "blog"
   weight = 10
 
 [[main]]
-  name = "태그"
-  pageRef = "tags"
-  weight = 20
+  name = "projects"
+  pageRef = "projects"
+  title = "projects"
+  weight = 15
 
 [[main]]
-  identifier = "github"
-  pre = "github"
-  url = "https://github.com/KimSungBeen"
-  weight = 30
+  name = "tags"
+  pageRef = "tags"
+  title = "tags"
+  weight = 20
 
 [[footer]]
   name = "GitHub"

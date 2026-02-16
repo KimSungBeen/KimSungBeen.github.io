@@ -1,0 +1,44 @@
+{{- $darkPath := strings.TrimPrefix "/" .Site.Params.logo -}}
+{{- $darkLogo := printf "/%s" $darkPath | relLangURL -}}
+{{- with resources.Get $darkPath -}}
+  {{- $darkLogo = .RelPermalink -}}
+{{- end -}}
+{{- $lightLogoPath := strings.TrimPrefix "/" (.Site.Params.logoLight | default .Site.Params.logo) -}}
+{{- $lightLogo := printf "/%s" $lightLogoPath | relLangURL -}}
+{{- with resources.Get $lightLogoPath -}}
+  {{- $lightLogo = .RelPermalink -}}
+{{- end -}}
+{{- if ne $darkLogo $lightLogo -}}
+  <script>
+    (function () {
+      var darkLogo = "{{ $darkLogo }}";
+      var lightLogo = "{{ $lightLogo }}";
+
+      function applyThemeLogo() {
+        var logo = document.querySelector(".main-menu img.logo");
+        if (!logo) return;
+        var useDark = document.documentElement.classList.contains("dark");
+        var target = useDark ? darkLogo : lightLogo;
+        if (logo.getAttribute("src") !== target) {
+          logo.setAttribute("src", target);
+        }
+      }
+
+      applyThemeLogo();
+
+      var observer = new MutationObserver(function (mutations) {
+        for (var i = 0; i < mutations.length; i++) {
+          if (mutations[i].attributeName === "class") {
+            applyThemeLogo();
+            break;
+          }
+        }
+      });
+
+      observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ["class"],
+      });
+    })();
+  </script>
+{{- end -}}
