@@ -94,7 +94,7 @@ jobs:
               echo "  messagingSenderId = \"${{ secrets.FIREBASE_MESSAGING_SENDER_ID }}\""
               echo "  appId = \"${{ secrets.FIREBASE_APP_ID }}\""
               echo "  measurementId = \"${{ secrets.FIREBASE_MEASUREMENT_ID }}\""
-            } > config/_default/params.firebase.toml
+            } >> config/_default/params.toml
             echo "Firebase config injected from secrets."
           else
             echo "Firebase secrets are not set. Skipping Firebase config injection."
