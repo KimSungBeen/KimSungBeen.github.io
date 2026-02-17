@@ -20,6 +20,7 @@ title = "sbeenx.io"
   imageQuality = 96
   headline = '🇰🇷 Android developer <img src="/img/android-head.svg" alt="Android" style="display:inline-block;height:0.86em;width:auto;vertical-align:-0.1em;margin:0 0.08em;" /> Katsu lover <img src="/img/katsu.png" alt="Katsu" style="display:inline-block;height:1.05em;width:auto;vertical-align:-0.1em;margin:0 0.08em;" /> Manchester city fan <img src="/img/manchester-city-logo.png" alt="Manchester City" style="display:inline-block;height:1.05em;width:auto;vertical-align:-0.1em;margin:0 0.08em;" />'
   bio = "나와 동료의 시간을 절약하자."
+  phone = "tel: 010-4034-6763"
   links = [
     { github = "https://github.com/KimSungBeen" },
     { instagram = "https://www.instagram.com/do1and/" },

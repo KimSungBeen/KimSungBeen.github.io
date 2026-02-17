@@ -9,38 +9,14 @@ showReadingTime: false
 showTableOfContents: true
 ---
 
-## About Me
-
-- 6년 차 Android 개발자입니다.
-- 클린 아키텍처와 MVVM 기반 설계/구현을 선호합니다.
-- 개발 비용을 줄이고 유지보수성을 높이는 개선 작업(모듈화, 자동화, 디자인 시스템)을 중요하게 생각합니다.
-
-## Contact
-
-- Email: `sbeenx.io@gmail.com`
-- Phone: `010-4034-6763`
-- GitHub: [https://github.com/KimSungBeen](https://github.com/KimSungBeen)
-
-## Skills
-
-| Category | Stack |
-| --- | --- |
-| Language | `Kotlin`, `Java` |
-| Architecture / Pattern | `MVVM`, `Hilt` |
-| Asynchronous / Stream | `Coroutine`, `Flow`, `RxJava3` |
-| Android UI / Jetpack | `Compose`, `Navigation`, `ViewModel`, `LiveData`, `DataBinding`, `ViewBinding` |
-| Data / Storage | `Room`, `SharedPreferences` |
-| Networking | `OkHttp3`, `Ktor Client` |
-| Collaboration / Tools | `Slack`, `Jira`, `Figma`, `Notion` |
-| Library | `Glide`, `Coil`, `Lottie` |
-
 ## Work Experience
 
 ### 티비유 (2022.01.10 ~ 현재)
 
-- 일렉베리 Android 앱 개발 및 유지보수
-- 전기차 충전소 지도 렌더링 성능 최적화
-- View 기반 마커 렌더링을 Bitmap/Canvas 방식으로 전환하여 Main Thread 부하 완화
+- `elecvery` Android 앱 개발 및 유지보수
+  - 전기차 충전소 지도 View 기반 마커 렌더링을 `Bitmap`/`Canvas` 방식으로 전환하여 Main Thread 부하 완화를 통한 성능 개선
+  - WearOS(워치)앱 개발 및 컴플리케이션 기능 구현
+  - POI 카테고리의 Android Auto 개발 (`MapWithContentTemplate` 활용)
 
 ### (주)박스넷 개발팀 (2020.05.06 ~ 2021.12.31)
 
@@ -66,7 +42,7 @@ showTableOfContents: true
 
 ### XML -> Compose 마이그레이션 (2023.10.27 ~, 기여도 50%)
 
-- XML 기반 UI를 Jetpack Compose로 점진 전환
+- XML 기반 UI를 Jetpack Compose로 점진적 전환
 - 반복 UI 코드 및 디버깅 비용 감소
 - 컴포저블 단위 재사용성, 유지보수성 향상
 
@@ -135,6 +111,18 @@ showTableOfContents: true
 
 - 연속 텍스트 내 특정 구간에 클릭 액션을 지정할 수 있는 라이브러리
 
-## Source
+## Skills
 
-- Notion 원본: [몰입을 즐기는 개발자, 김성빈 입니다.](https://www.notion.so/ce43809aa6aa49bf9ebb334259ddb9dd)
+| Category | Stack |
+| --- | --- |
+| Language | `Kotlin`, `Java` |
+| Architecture / Pattern | `Clean Architecture`, `MVVM` |
+| Build Configuration | `Build-Logic` |
+| DI | `Hilt` |
+| Asynchronous / Stream | `Coroutine`, `Flow`, `RxJava3` |
+| Background | `WorkManager` |
+| Android UI / Jetpack | `Compose`, `Navigation`, `ViewModel`, `LiveData`, `DataBinding`, `ViewBinding` |
+| Data / Storage | `Room`, `DataStore`, `SharedPreferences` |
+| Networking | `OkHttp3`, `Ktor Client` |
+| Collaboration / Tools | `Slack`, `Jira`, `Figma`, `Notion` |
+| Library | `Coil`, `Glide`, `Lottie` |
