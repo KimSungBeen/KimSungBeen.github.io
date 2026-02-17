@@ -11,10 +11,27 @@
   weight = 6
 
 [[main]]
+  identifier = "blog"
   name = "blog"
   pageRef = "posts"
   title = "blog"
   weight = 10
+
+[[main]]
+  identifier = "blog-study"
+  parent = "blog"
+  name = "study"
+  pageRef = "posts/study"
+  title = "study"
+  weight = 11
+
+[[main]]
+  identifier = "blog-work"
+  parent = "blog"
+  name = "work"
+  pageRef = "posts/work"
+  title = "work"
+  weight = 12
 
 [[main]]
   name = "projects"

@@ -8,6 +8,7 @@
 {{- with resources.Get $lightLogoPath -}}
   {{- $lightLogo = .RelPermalink -}}
 {{- end -}}
+{{- $typeitLib := resources.Get "lib/typeit/typeit.umd.js" | resources.Fingerprint (.Site.Params.fingerprintAlgorithm | default "sha512") -}}
 {{- if ne $darkLogo $lightLogo -}}
   <script>
     (function () {
@@ -42,3 +43,99 @@
     })();
   </script>
 {{- end -}}
+
+<script>
+  (function () {
+    var path = window.location.pathname.replace(/\/+$/, "");
+    var isResume = path === "/resume" || /\/resume$/.test(path);
+    var isAbout = path === "/about" || /\/about$/.test(path);
+
+    if (isAbout) {
+      document.body.classList.add("bf-about-page");
+    }
+
+    if (!isResume) return;
+
+    document.body.classList.add("bf-resume-page");
+
+    function applyResumeTypeit() {
+      if (typeof TypeIt !== "function") return;
+
+      var headings = document.querySelectorAll("body.bf-resume-page .article-content h2");
+      headings.forEach(function (heading, idx) {
+        if (heading.dataset.typeitApplied === "true") return;
+
+        var preservedNodes = Array.from(heading.childNodes)
+          .filter(function (node) {
+            return node.nodeType !== Node.TEXT_NODE;
+          })
+          .map(function (node) {
+            return node.cloneNode(true);
+          });
+
+        var rawText = Array.from(heading.childNodes)
+          .filter(function (node) {
+            return node.nodeType === Node.TEXT_NODE;
+          })
+          .map(function (node) {
+            return node.textContent;
+          })
+          .join(" ")
+          .replace(/\s+/g, " ")
+          .trim();
+
+        if (!rawText) return;
+
+        heading.dataset.typeitApplied = "true";
+        heading.setAttribute("aria-label", rawText);
+        heading.textContent = "";
+
+        new TypeIt(heading, {
+          strings: [rawText],
+          speed: 54,
+          lifeLike: true,
+          startDelay: 120 + idx * 180,
+          breakLines: false,
+          waitUntilVisible: true,
+          loop: false,
+          afterComplete: function () {
+            preservedNodes.forEach(function (node) {
+              heading.appendChild(node);
+            });
+          }
+        }).go();
+      });
+    }
+
+    function ensureTypeitLoaded(callback) {
+      if (typeof TypeIt === "function") {
+        callback();
+        return;
+      }
+
+      var existing = document.querySelector("script[data-resume-typeit='1']");
+      if (existing) {
+        existing.addEventListener("load", callback, { once: true });
+        return;
+      }
+
+      var script = document.createElement("script");
+      script.src = "{{ $typeitLib.RelPermalink }}";
+      script.defer = true;
+      script.setAttribute("data-resume-typeit", "1");
+      script.integrity = "{{ $typeitLib.Data.Integrity }}";
+      script.crossOrigin = "anonymous";
+      script.onload = callback;
+      document.head.appendChild(script);
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", function () {
+        ensureTypeitLoaded(applyResumeTypeit);
+      });
+      return;
+    }
+
+    ensureTypeitLoaded(applyResumeTypeit);
+  })();
+</script>
