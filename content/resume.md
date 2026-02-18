@@ -109,7 +109,11 @@ showTableOfContents: true
   <li>B2B AndroidTV 앱 <code>PlayInTV</code> 개발</li>
   <li>QR 코드 스캐너 앱 <code>씨네호텔</code> 개발</li>
   <li>웹툰 플랫폼 <code>애니툰</code> 개발 및 유지보수</li>
-  <li>건설현장 출퇴근 관리 앱 <code>근태도우미</code> 프로토타입 개발</li>
+  <li>건설현장 출퇴근 관리 앱 <code>근태도우미</code> 프로토타입 개발
+    <ul>
+      <li>Beacon(BLE) 기반 출퇴근 기능 개발 경험</li>
+    </ul>
+  </li>
   <li>LeanBack API/UI, ZXing, 커스텀 캘린더 뷰 구현 경험</li>
 </ul>
 </div>
