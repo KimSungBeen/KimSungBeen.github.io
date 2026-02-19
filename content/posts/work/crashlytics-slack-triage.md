@@ -8,6 +8,7 @@ endDate: 2026-02-19
 contribution: 1.0
 showDate: true
 showAuthor: false
+featureimage: "/images/posts/work/crashlytics-slack-thread-example.png"
 categories: ["work"]
 tags: ["android", "crashlytics", "slack", "mcp", "automation", "incident-response"]
 series: ["Elecvery Contributions"]
