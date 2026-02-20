@@ -11,7 +11,7 @@ mainSections = ["posts"]
 hotlinkFeatureImage = false
 fingerprintAlgorithm = "sha512"
 disableTextInHeader = true
-defaultSocialImage = "images/og-default.png"
+defaultSocialImage = "images/og_default.png"
 
 [header]
   layout = "fixed"
