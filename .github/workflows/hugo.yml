@@ -82,10 +82,25 @@ jobs:
       - name: Configure Git
         run: git config core.quotepath false
 
+      - name: Generate Google Analytics config from secrets
+        run: |
+          if [[ -n "${{ secrets.GOOGLE_ANALYTICS_ID }}" ]]; then
+            {
+              echo
+              echo "[services]"
+              echo "  [services.googleAnalytics]"
+              echo "    ID = \"${{ secrets.GOOGLE_ANALYTICS_ID }}\""
+            } >> config/_default/hugo.toml
+            echo "Google Analytics config injected from secrets."
+          else
+            echo "Google Analytics secret is not set. Skipping Google Analytics injection."
+          fi
+
       - name: Generate Firebase params from secrets
         run: |
           if [[ -n "${{ secrets.FIREBASE_API_KEY }}" ]]; then
             {
+              echo
               echo "[firebase]"
               echo "  apiKey = \"${{ secrets.FIREBASE_API_KEY }}\""
               echo "  authDomain = \"${{ secrets.FIREBASE_AUTH_DOMAIN }}\""
